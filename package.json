@@ -85,8 +85,10 @@
     "jscs": "^3.0.7",
     "jshint": "^2.9.3",
     "jshint-stylish": "^2.2.1",
+    "node-jsx": "^0.13.3",
     "node-notifier": "^4.6.1",
-    "react-dom": "^15.3.2",
+    "react": "^15.5.3",
+    "react-dom": "^15.5.3",
     "wiredep": "^4.0.0"
   }
 }

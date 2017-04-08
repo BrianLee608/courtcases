@@ -1,6 +1,7 @@
 var express = require('express');
 var path = require('path');
 //var favicon = require('serve-favicon');
+var React = require('react/addons')
 var Router = require('react-router').Router
 var Route = require('react-router').Route
 var Link = require('react-router').Link
@@ -18,7 +19,6 @@ var mongodb = require('mongodb');
 var ObjectId = require('mongodb').ObjectId;
 var Grid = require('gridfs-stream');
 var multer = require("multer");
-// var routes = require('../Server/src/routes/index.js');
 
 
 var app = require('express')();
@@ -29,6 +29,7 @@ var MongoClient = require("mongodb").MongoClient;
 var mongoUrl = 'mongodb://localhost:27017/courtData';
 
 var mongoDbPromise = MongoClient.connect(mongoUrl)
+require('node-jsx').install();
 
 // view engine setup
 app.set('views', './client/views');
@@ -51,12 +52,11 @@ if (app.get('env') === 'production') {
 }
 
 app.use(session(sess));
-app.use(passport.initialize());
-app.use(passport.session());
-
 
 app.get('/', function( req, res ) {
-  res.render('signIn');
+  var ReactApp = React.createFactory(require('../Client/Components/app'));
+  var reactHtml = React.renderToString(ReactApp({}));
+  res.render('signIn', {html: reactHtml});
 });
 
 
