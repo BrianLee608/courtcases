@@ -30,6 +30,17 @@ var mongoUrl = 'mongodb://localhost:27017/courtData';
 
 var mongoDbPromise = MongoClient.connect(mongoUrl)
 
+var mongoose = require('mongoose');
+var State = require('./models/State');
+mongoose.connect(mongoUrl);
+
+var db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log("Connected to db");
+});
+
 // view engine setup
 app.set('views', './client/views');
 app.set('view engine', 'ejs');
@@ -54,10 +65,65 @@ app.use(session(sess));
 app.use(passport.initialize());
 app.use(passport.session());
 
+function getStateByName(stateName) {
+  var state = null
+  State.findOne({ name: stateName }, function(err, s) {
+    if (err) throw err;
+    if (s) state = s;
+  });
+  return state;
+}
+
+let s = getStateByName('MD');
+console.log(s);
 
 app.get('/', function( req, res ) {
   res.render('signIn');
 });
+
+// Inserts a new State object in DB
+app.post('/state', function(req, res) {
+  console.log(req.body);
+  State.findOne({ name: req.body.state.name }, function(err, state) {
+    if (err) throw err;
+    if (state) return res.send('That state already exists in the database.');
+
+    console.log(state);
+
+    var state = new State({
+      name: req.body.state.name,
+      keywords: req.body.state.keywords
+    });
+
+    // Save state to database
+    state.save(function(err) {
+      if (err) throw err;
+      return res.send('Succesfully inserted state.');
+    });
+  });
+});
+
+
+
+
+
+// var testState = new State({ name: 'California', keywords: [{ keyword: 'Hello', score: 111 }]});
+//
+// testState.save(function(err) {
+//     if (err) throw err;
+//     // return
+//     // res.send('Succesfully inserted state!!.');
+// });
+
+// State.find(function (err, states) {
+//   if (err) return console.error(err);
+//   for (let obj of states) {
+//     console.log(obj);
+//   }
+// })
+
+
+
 
 
 mongoDbPromise.then(function(db){
