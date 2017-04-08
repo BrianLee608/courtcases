@@ -31,6 +31,17 @@ var mongoUrl = 'mongodb://localhost:27017/courtData';
 var mongoDbPromise = MongoClient.connect(mongoUrl)
 require('node-jsx').install();
 
+var mongoose = require('mongoose');
+var State = require('./models/State');
+mongoose.connect(mongoUrl);
+
+var db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log("Connected to db");
+});
+
 // view engine setup
 app.set('views', './client/views');
 app.set('view engine', 'ejs');
@@ -58,6 +69,71 @@ app.get('/', function( req, res ) {
   var reactHtml = React.renderToString(ReactApp({}));
   res.render('signIn', {html: reactHtml});
 });
+
+// Inserts a new State object in DB
+app.post('/state', function(req, res) {
+  let stateName = req.body.state.name;
+
+  if (stateName.length !== 2)
+    res.send('Was expecting 2 characters for state abbreviation.');
+
+  stateName = stateName.toUpperCase();
+
+  State.findOne({ name: stateName}, function(err, state) {
+    if (err) throw err;
+    if (state) return res.send('That state already exists in the database.');
+
+    var state = new State({
+      name: req.body.state.name,
+      keywords: req.body.state.keywords
+    });
+
+    // Save state to database
+    state.save(function(err) {
+      if (err) throw err;
+      return res.send('Succesfully inserted state.');
+    });
+  });
+});
+
+// Get a state from db
+app.get('/state/:stateName', function(req, res) {
+  let stateName = req.params.stateName.toUpperCase();
+  State.findOne({ name: stateName }, function(err, state) {
+    if (err) throw err;
+    if (!state) return res.send('No state found with that name.');
+    return res.send(JSON.stringify(state));
+  });
+});
+
+// Deletes a state from db
+app.delete('/state/:stateName', function(req, res) {
+  let stateName = req.params.stateName.toUpperCase();
+  State.findOneAndRemove({ name: stateName }, function(err, state) {
+    if (err) throw err;
+    if (!state)
+      return res.send('No state found with those initials');
+    res.send('State deleted.');
+  });
+});
+
+
+
+// var testState = new State({ name: 'California', keywords: [{ keyword: 'Hello', score: 111 }]});
+//
+// testState.save(function(err) {
+//     if (err) throw err;
+//     // return
+//     // res.send('Succesfully inserted state!!.');
+// });
+
+// State.find(function (err, states) {
+//   if (err) return console.error(err);
+//   for (let obj of states) {
+//     console.log(obj);
+//   }
+// })
+
 
 
 mongoDbPromise.then(function(db){
