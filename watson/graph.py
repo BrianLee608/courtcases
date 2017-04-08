@@ -5,16 +5,17 @@ from pprint import pprint
 
 from util import states_abv_to_full, states_full_to_abv
 
-DATA_DIR = './data/'
+# DATA_DIR = './data/'
+DATA_DIR = '/Users/brianlee/Desktop/data_watson'
 
 Node = namedtuple('Node', ['id', 'label', 'x', 'y'])
 
 class Edge:
-    def __init__(self, id, source, target):
+    def __init__(self, id, source, target, n=1):
         self.id = id
         self.source = source
         self.target = target
-        self.n = 1  # ranges from 1 to 16
+        self.n = n  # ranges from 1 to 16
 
     def __str__(self):
         return self.id + '; n = ' + str(self.n)
@@ -73,15 +74,28 @@ def create_edges(dirs):
                 data = json.load(datafile)
                 process_entities(data, source)
 
+def write_nodes_to_jsonfile():
+    nodes_json = {'nodes': []}
+    for n in nodes:
+        nodes_json['nodes'].append(json.dumps(n.__dict__))
+
+    with open('nodes.json', 'w') as f:
+        json.dump(nodes_json, f)
+
+def write_edges_to_jsonfile():
+    edges_json = {'edges': []}
+    for _, v in edges.items():
+        edges_json['edges'].append(json.dumps(v.__dict__))
+
+    with open('edges.json', 'w') as f:
+        json.dump(edges_json, f)
+
 if __name__ == '__main__':
     dirs = [os.path.join(DATA_DIR, d) for d in os.listdir(DATA_DIR) \
                 if os.path.isdir(os.path.join(DATA_DIR, d))]
 
     create_nodes(dirs)
-
     create_edges(dirs)
-    # edges['md-va'] = Edge('md-va', 'md', 'va')
-    # edges['md-tn'] = Edge('md-va', 'md', 'tn')
-    # edges['dc-ny'] = Edge('dc-ny', 'dc', 'ny')
 
-    pprint(edges)
+    write_nodes_to_jsonfile()
+    write_edges_to_jsonfile()
