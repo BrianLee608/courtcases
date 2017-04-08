@@ -65,30 +65,22 @@ app.use(session(sess));
 app.use(passport.initialize());
 app.use(passport.session());
 
-function getStateByName(stateName) {
-  var state = null
-  State.findOne({ name: stateName }, function(err, s) {
-    if (err) throw err;
-    if (s) state = s;
-  });
-  return state;
-}
-
-let s = getStateByName('MD');
-console.log(s);
-
 app.get('/', function( req, res ) {
   res.render('signIn');
 });
 
 // Inserts a new State object in DB
 app.post('/state', function(req, res) {
-  console.log(req.body);
-  State.findOne({ name: req.body.state.name }, function(err, state) {
+  let stateName = req.body.state.name;
+
+  if (stateName.length !== 2)
+    res.send('Was expecting 2 characters for state abbreviation.');
+
+  stateName = stateName.toUpperCase();
+
+  State.findOne({ name: stateName}, function(err, state) {
     if (err) throw err;
     if (state) return res.send('That state already exists in the database.');
-
-    console.log(state);
 
     var state = new State({
       name: req.body.state.name,
@@ -103,7 +95,26 @@ app.post('/state', function(req, res) {
   });
 });
 
+// Get a state from db
+app.get('/state/:stateName', function(req, res) {
+  let stateName = req.params.stateName.toUpperCase();
+  State.findOne({ name: stateName }, function(err, state) {
+    if (err) throw err;
+    if (!state) return res.send('No state found with that name.');
+    return res.send(JSON.stringify(state));
+  });
+});
 
+// Deletes a state from db
+app.delete('/state/:stateName', function(req, res) {
+  let stateName = req.params.stateName.toUpperCase();
+  State.findOneAndRemove({ name: stateName }, function(err, state) {
+    if (err) throw err;
+    if (!state)
+      return res.send('No state found with those initials');
+    res.send('State deleted.');
+  });
+});
 
 
 
@@ -121,8 +132,6 @@ app.post('/state', function(req, res) {
 //     console.log(obj);
 //   }
 // })
-
-
 
 
 
