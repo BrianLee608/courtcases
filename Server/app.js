@@ -1,7 +1,8 @@
 var express = require('express');
 var path = require('path');
 //var favicon = require('serve-favicon');
-var React = require('react/addons')
+var React = require('react');
+var ReactDOMServer = require('react-dom/server');
 var Router = require('react-router').Router
 var Route = require('react-router').Route
 var Link = require('react-router').Link
@@ -66,7 +67,7 @@ app.use(session(sess));
 
 app.get('/', function( req, res ) {
   var ReactApp = React.createFactory(require('../Client/Components/app'));
-  var reactHtml = React.renderToString(ReactApp({}));
+  var reactHtml = ReactDOMServer.renderToString(ReactApp({}));
   res.render('signIn', {html: reactHtml});
 });
 
