@@ -25,6 +25,7 @@ Download mongodb at https://www.mongodb.com/download-center?jmp=nav#community
 
 To run the production/dev server...
 ```sh
+$ sudo mongod
 $ gulp
 $ // go to localhost:3000
 ```
