@@ -75,6 +75,10 @@ app.get('/graph', function(req, res) {
   res.render('graph');
 });
 
+app.get('/graph2', function(req, res) {
+  res.render('graph2');
+});
+
 app.get('/graph/nodes', function(req, res) {
   let nodesPath = path.join(__dirname, '..', 'watson', 'nodes.json');
   let nodes = JSON.parse(fs.readFileSync(nodesPath)).nodes;
