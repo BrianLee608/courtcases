@@ -8,7 +8,7 @@ Features:
   - Maps US states to word-cloud frequency of common concepts in that state's legislative history
   - Maps US states to other US states based on legislative interactions between the two states
 
-![](demopics/img1.png?raw=true)
+![](demopics/img0.png?raw=true)
 ![](demopics/img2.png?raw=true)
 ![](demopics/img3.png?raw=true)
 
