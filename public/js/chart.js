@@ -1736,188 +1736,230 @@ var data = {
 }
 var map = AmCharts.makeChart( "chartdiv", {
   "type": "map",
-  "theme": "chalk",
-  "colorSteps": 10,
+  "theme": "light",
   "dataProvider": {
     "map": "usaLow",
     "areas": [ {
       "id": "US-AL",
-      "value": 4447100
+      "value": 4447100,
+      "selectable": true
     }, {
       "id": "US-AK",
-      "value": 626932
+      "value": 626932,
+      "selectable": true
     }, {
       "id": "US-AZ",
-      "value": 5130632
+      "value": 5130632,
+      "selectable": true
     }, {
       "id": "US-AR",
-      "value": 2673400
+      "value": 2673400,
+      "selectable": true
     }, {
       "id": "US-CA",
-      "value": 33871648
+      "value": 33871648,
+      "selectable": true
     }, {
       "id": "US-CO",
-      "value": 4301261
+      "value": 4301261,
+      "selectable": true
     }, {
       "id": "US-CT",
-      "value": 3405565
+      "value": 3405565,
+      "selectable": true
     }, {
       "id": "US-DE",
-      "value": 783600
+      "value": 783600,
+      "selectable": true
     }, {
       "id": "US-FL",
-      "value": 15982378
+      "value": 15982378,
+      "selectable": true
     }, {
       "id": "US-GA",
-      "value": 8186453
+      "value": 8186453,
+      "selectable": true
     }, {
       "id": "US-HI",
-      "value": 1211537
+      "value": 1211537,
+      "selectable": true
     }, {
       "id": "US-ID",
-      "value": 1293953
+      "value": 1293953,
+      "selectable": true
     }, {
       "id": "US-IL",
-      "value": 12419293
+      "value": 12419293,
+      "selectable": true
     }, {
       "id": "US-IN",
-      "value": 6080485
+      "value": 6080485,
+      "selectable": true
     }, {
       "id": "US-IA",
-      "value": 2926324
+      "value": 2926324,
+      "selectable": true
     }, {
       "id": "US-KS",
-      "value": 2688418
+      "value": 2688418,
+      "selectable": true
     }, {
       "id": "US-KY",
-      "value": 4041769
+      "value": 4041769,
+      "selectable": true
     }, {
       "id": "US-LA",
-      "value": 4468976
+      "value": 4468976,
+      "selectable": true
     }, {
       "id": "US-ME",
-      "value": 1274923
+      "value": 1274923,
+      "selectable": true
     }, {
       "id": "US-MD",
-      "value": 5296486
+      "value": 5296486,
+      "selectable": true
     }, {
       "id": "US-MA",
-      "value": 6349097
+      "value": 6349097,
+      "selectable": true
     }, {
       "id": "US-MI",
-      "value": 9938444
+      "value": 9938444,
+      "selectable": true
     }, {
       "id": "US-MN",
-      "value": 4919479
+      "value": 4919479,
+      "selectable": true
     }, {
       "id": "US-MS",
-      "value": 2844658
+      "value": 2844658,
+      "selectable": true
     }, {
       "id": "US-MO",
-      "value": 5595211
+      "value": 5595211,
+      "selectable": true
     }, {
       "id": "US-MT",
-      "value": 902195
+      "value": 902195,
+      "selectable": true
     }, {
       "id": "US-NE",
-      "value": 1711263
+      "value": 1711263,
+      "selectable": true
     }, {
       "id": "US-NV",
-      "value": 1998257
+      "value": 1998257,
+      "selectable": true
     }, {
       "id": "US-NH",
-      "value": 1235786
+      "value": 1235786,
+      "selectable": true
     }, {
       "id": "US-NJ",
-      "value": 8414350
+      "value": 8414350,
+      "selectable": true
     }, {
       "id": "US-NM",
-      "value": 1819046
+      "value": 1819046,
+      "selectable": true
     }, {
       "id": "US-NY",
-      "value": 18976457
+      "value": 18976457,
+      "selectable": true
     }, {
       "id": "US-NC",
-      "value": 8049313
+      "value": 8049313,
+      "selectable": true
     }, {
       "id": "US-ND",
-      "value": 642200
+      "value": 642200,
+      "selectable": true
     }, {
       "id": "US-OH",
-      "value": 11353140
+      "value": 11353140,
+      "selectable": true
     }, {
       "id": "US-OK",
-      "value": 3450654
+      "value": 3450654,
+      "selectable": true
     }, {
       "id": "US-OR",
-      "value": 3421399
+      "value": 3421399,
+      "selectable": true
     }, {
       "id": "US-PA",
-      "value": 12281054
+      "value": 12281054,
+      "selectable": true
     }, {
       "id": "US-RI",
-      "value": 1048319
+      "value": 1048319,
+      "selectable": true
     }, {
       "id": "US-SC",
-      "value": 4012012
+      "value": 4012012,
+      "selectable": true
     }, {
       "id": "US-SD",
-      "value": 754844
+      "value": 754844,
+      "selectable": true
     }, {
       "id": "US-TN",
-      "value": 5689283
+      "value": 5689283,
+      "selectable": true
     }, {
       "id": "US-TX",
-      "value": 20851820
+      "value": 20851820,
+      "selectable": true
     }, {
       "id": "US-UT",
-      "value": 2233169
+      "value": 2233169,
+      "selectable": true
     }, {
       "id": "US-VT",
-      "value": 608827
+      "value": 608827,
+      "selectable": true
     }, {
       "id": "US-VA",
-      "value": 7078515
+      "value": 7078515,
+      "selectable": true
     }, {
       "id": "US-WA",
-      "value": 5894121
+      "value": 5894121,
+      "selectable": true
     }, {
       "id": "US-WV",
-      "value": 1808344
+      "value": 1808344,
+      "selectable": true
     }, {
       "id": "US-WI",
-      "value": 5363675
+      "value": 5363675,
+      "selectable": true
     }, {
       "id": "US-WY",
-      "value": 493782
+      "value": 493782,
+      "selectable": true
     } ]
   },
   "listeners": [
     {
     "event": "clickMapObject",
     "method": function( e ) {
-        setTimeout(function(){
-          var db = [];
-          var state = e.mapObject.id;
-          state = state.substring(3).toLowerCase();
-          for (var x of Object.keys(data[state])) {
-            db.push([x,Math.ceil(data[state][x]) * 25]);
-          }
-          WordCloud.minFontSize = "20px"
-          WordCloud(document.getElementById('word_cloud'), { list: db} );
-          $("#exampleModal").modal()
-          state = null;
-        }, 1000);
-
-      } }],
+      var db = [];
+      var state = e.mapObject.id;
+      state = state.substring(3).toLowerCase();
+      for (var x of Object.keys(data[state])) {
+        db.push([x,Math.ceil(data[state][x]) * 25]);
+      }
+      WordCloud.minFontSize = "20px"
+      WordCloud(document.getElementById('word_cloud'), { list: db} );
+      $("#exampleModal").modal()
+      state = null;
+      }
+    }
+  ],
   "areasSettings": {
-    "autoZoom": true
-  },
-
-  "valueLegend": {
-    "right": 10,
-    "minValue": "little",
-    "maxValue": "a lot!"
+    "autoZoom": false
   },
 
   "export": {

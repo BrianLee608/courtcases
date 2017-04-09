@@ -2,7 +2,23 @@ body { background-color: #3f3e3b; color: #fff; }
 #chartdiv {
   width: 100%;
   height: 500px;
+  margin-top: 60px;
 }
 .wordCloud {
   width: 100%;
+}
+.flex-container {
+    display: flex;
+}
+
+.flex-item {
+    margin: 10px;
+}
+.item1 {
+  -webkit-flex: 5;
+  flex: 5;
+}
+.item2 {
+  -webkit-flex: 1;
+  flex: 1;
 }
