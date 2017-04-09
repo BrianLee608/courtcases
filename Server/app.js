@@ -72,10 +72,6 @@ app.get('/', function(req, res) {
 });
 
 app.get('/graph', function(req, res) {
-  res.render('graph');
-});
-
-app.get('/graph2', function(req, res) {
   res.render('graph2');
 });
 
