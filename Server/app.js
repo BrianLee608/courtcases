@@ -21,6 +21,8 @@ var ObjectId = require('mongodb').ObjectId;
 var Grid = require('gridfs-stream');
 var multer = require("multer");
 
+var fs = require('fs');
+var path = require('path');
 
 var app = require('express')();
 var http = require('http').Server(app);
@@ -65,8 +67,30 @@ if (app.get('env') === 'production') {
 
 app.use(session(sess));
 
-app.get('/', function( req, res ) {
+app.get('/', function(req, res) {
   res.render('home');
+});
+
+app.get('/graph', function(req, res) {
+  res.render('graph');
+});
+
+app.get('/graph/nodes', function(req, res) {
+  let nodesPath = path.join(__dirname, '..', 'watson', 'nodes.json');
+  let nodes = JSON.parse(fs.readFileSync(nodesPath)).nodes;
+  res.send(JSON.stringify(nodes));
+});
+
+app.get('/graph/coords', function(req, res) {
+  let coordsPath = path.join(__dirname, '..', 'watson', 'coordinates.json');
+  let coords = JSON.parse(fs.readFileSync(coordsPath)).coordinates;
+  res.send(JSON.stringify(coords));
+});
+
+app.get('/graph/edges', function(req, res) {
+  let jsonPath = path.join(__dirname, '..', 'watson', 'edges.json');
+  let edges = JSON.parse(fs.readFileSync(jsonPath)).edges;
+  res.send(JSON.stringify(edges));
 });
 
 // Inserts a new State object in DB

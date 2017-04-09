@@ -5,7 +5,6 @@ from pprint import pprint
 
 from util import states_abv_to_full, states_full_to_abv
 
-# DATA_DIR = './data/'
 DATA_DIR = '/Users/brianlee/Desktop/data_watson'
 
 Node = namedtuple('Node', ['id', 'label', 'x', 'y'])
@@ -37,7 +36,7 @@ def create_nodes(dirs):
 
 def parse_abv_from_text(target):
     target = target.replace('.', '')
-    if len(target) == 2:
+    if len(target) == 2 and target.upper() in states_abv_to_full.keys():
         # ie CA, MD, NY
         return target.upper()
     elif target in states_full_to_abv.keys():
