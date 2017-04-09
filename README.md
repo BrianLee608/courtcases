@@ -9,6 +9,8 @@ Features:
   - Maps US states to other US states based on legislative interactions between the two states
 
 ![](demopics/img1.png?raw=true)
+![](demopics/img2.png?raw=true)
+![](demopics/img3.png?raw=true)
 
 ### Installation
 
