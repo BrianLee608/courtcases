@@ -1,0 +1,602 @@
+{
+  "keywords": [
+    {
+      "text": "foreign corporations",
+      "relevance": 0.938733
+    },
+    {
+      "text": "North American",
+      "relevance": 0.825021
+    },
+    {
+      "text": "section",
+      "relevance": 0.778726
+    },
+    {
+      "text": "General Corporation Law",
+      "relevance": 0.586418
+    },
+    {
+      "text": "Corporations Code",
+      "relevance": 0.518675
+    },
+    {
+      "text": "Corporations Code section",
+      "relevance": 0.516433
+    },
+    {
+      "text": "court",
+      "relevance": 0.514069
+    },
+    {
+      "text": "survival statute",
+      "relevance": 0.505933
+    },
+    {
+      "text": "california",
+      "relevance": 0.463986
+    },
+    {
+      "text": "foreign corporation",
+      "relevance": 0.453887
+    },
+    {
+      "text": "appellate court",
+      "relevance": 0.431283
+    },
+    {
+      "text": "division",
+      "relevance": 0.414252
+    },
+    {
+      "text": "defendant",
+      "relevance": 0.406534
+    },
+    {
+      "text": "domestic corporations",
+      "relevance": 0.403393
+    },
+    {
+      "text": "provisions",
+      "relevance": 0.397288
+    },
+    {
+      "text": "supra",
+      "relevance": 0.376273
+    },
+    {
+      "text": "Cal.App.3d",
+      "relevance": 0.362073
+    },
+    {
+      "text": "article xii",
+      "relevance": 0.361211
+    },
+    {
+      "text": "California\u201fs survival statute",
+      "relevance": 0.359559
+    },
+    {
+      "text": "p.",
+      "relevance": 0.352886
+    },
+    {
+      "text": "business",
+      "relevance": 0.350055
+    },
+    {
+      "text": "survival law",
+      "relevance": 0.344581
+    },
+    {
+      "text": "California survival law",
+      "relevance": 0.324664
+    },
+    {
+      "text": "previous page",
+      "relevance": 0.32184
+    },
+    {
+      "text": "Corporation Law section",
+      "relevance": 0.320443
+    },
+    {
+      "text": "state",
+      "relevance": 0.318504
+    },
+    {
+      "text": "appellate court decisions",
+      "relevance": 0.317909
+    },
+    {
+      "text": "Constitution Revision Commission",
+      "relevance": 0.311268
+    },
+    {
+      "text": "trial court",
+      "relevance": 0.310743
+    },
+    {
+      "text": "plaintiffs",
+      "relevance": 0.309535
+    },
+    {
+      "text": "California Corporations Code",
+      "relevance": 0.307517
+    },
+    {
+      "text": "dissolution",
+      "relevance": 0.297213
+    },
+    {
+      "text": "statutory provisions",
+      "relevance": 0.293478
+    },
+    {
+      "text": "North American Asbestos",
+      "relevance": 0.291924
+    },
+    {
+      "text": "domestic corporation",
+      "relevance": 0.290835
+    },
+    {
+      "text": "corporate survival law",
+      "relevance": 0.288509
+    },
+    {
+      "text": "purely foreign corporations",
+      "relevance": 0.281294
+    },
+    {
+      "text": "certain foreign corporations",
+      "relevance": 0.280335
+    },
+    {
+      "text": "common law rule",
+      "relevance": 0.279765
+    },
+    {
+      "text": "American Asbestos Corp.",
+      "relevance": 0.27952
+    },
+    {
+      "text": "renders foreign corporations",
+      "relevance": 0.279052
+    },
+    {
+      "text": "current Corporations Code",
+      "relevance": 0.27847
+    },
+    {
+      "text": "render foreign corporations",
+      "relevance": 0.277998
+    },
+    {
+      "text": "foreign corporation conducts",
+      "relevance": 0.275794
+    },
+    {
+      "text": "new Corporations Code",
+      "relevance": 0.274706
+    },
+    {
+      "text": "pseudo-foreign corporation statute",
+      "relevance": 0.273564
+    },
+    {
+      "text": "Riley",
+      "relevance": 0.273365
+    },
+    {
+      "text": "Civil Code section",
+      "relevance": 0.273349
+    },
+    {
+      "text": "Texas corporation",
+      "relevance": 0.272037
+    },
+    {
+      "text": "Justice Scott",
+      "relevance": 0.272024
+    }
+  ],
+  "entities": [
+    {
+      "type": "Organization",
+      "text": "CORPORATION",
+      "relevance": 0.789098,
+      "disambiguation": {
+        "subtype": [],
+        "name": "Corporation",
+        "dbpedia_resource": "http://dbpedia.org/resource/Corporation"
+      },
+      "count": 61
+    },
+    {
+      "type": "Location",
+      "text": "California",
+      "relevance": 0.621623,
+      "disambiguation": {
+        "subtype": [
+          "PoliticalDistrict",
+          "AdministrativeDivision",
+          "Appellation",
+          "GovernmentalJurisdiction",
+          "USState",
+          "WineRegion",
+          "StateOrCounty"
+        ],
+        "name": "California",
+        "dbpedia_resource": "http://dbpedia.org/resource/California"
+      },
+      "count": 45
+    },
+    {
+      "type": "Organization",
+      "text": "Court of Appeal",
+      "relevance": 0.464336,
+      "disambiguation": {
+        "subtype": [],
+        "name": "Court of Appeal of Cameroon",
+        "dbpedia_resource": "http://dbpedia.org/resource/Court_of_Appeal_of_Cameroon"
+      },
+      "count": 6
+    },
+    {
+      "type": "Organization",
+      "text": "Corporations Code",
+      "relevance": 0.454978,
+      "count": 5
+    },
+    {
+      "type": "Organization",
+      "text": "General Corporation Law",
+      "relevance": 0.399865,
+      "count": 11
+    },
+    {
+      "type": "Person",
+      "text": "Riley",
+      "relevance": 0.359755,
+      "count": 15
+    },
+    {
+      "type": "Organization",
+      "text": "Legislature",
+      "relevance": 0.3355,
+      "count": 11
+    },
+    {
+      "type": "Organization",
+      "text": "Superior Court",
+      "relevance": 0.304469,
+      "disambiguation": {
+        "subtype": [],
+        "name": "Superior court",
+        "dbpedia_resource": "http://dbpedia.org/resource/Superior_court"
+      },
+      "count": 3
+    },
+    {
+      "type": "Location",
+      "text": "Delaware",
+      "relevance": 0.275303,
+      "disambiguation": {
+        "subtype": [
+          "PoliticalDistrict",
+          "AdministrativeDivision",
+          "GovernmentalJurisdiction",
+          "USState",
+          "StateOrCounty"
+        ],
+        "name": "Delaware",
+        "dbpedia_resource": "http://dbpedia.org/resource/Delaware"
+      },
+      "count": 5
+    },
+    {
+      "type": "Person",
+      "text": "Ann",
+      "relevance": 0.255279,
+      "count": 3
+    },
+    {
+      "type": "Company",
+      "text": "Diamond International Corporation",
+      "relevance": 0.253359,
+      "count": 1
+    },
+    {
+      "type": "Person",
+      "text": "Italics",
+      "relevance": 0.252149,
+      "count": 4
+    },
+    {
+      "type": "Organization",
+      "text": "Court of Chancery",
+      "relevance": 0.251897,
+      "disambiguation": {
+        "subtype": [],
+        "name": "Court of Chancery",
+        "dbpedia_resource": "http://dbpedia.org/resource/Court_of_Chancery"
+      },
+      "count": 1
+    },
+    {
+      "type": "Company",
+      "text": "Delaware General Corporation",
+      "relevance": 0.249988,
+      "count": 1
+    },
+    {
+      "type": "Company",
+      "text": "General Corporation Law",
+      "relevance": 0.248512,
+      "count": 1
+    },
+    {
+      "type": "Location",
+      "text": "California.",
+      "relevance": 0.246828,
+      "count": 3
+    },
+    {
+      "type": "Company",
+      "text": "North American Asbestos Corp.",
+      "relevance": 0.246542,
+      "count": 2
+    },
+    {
+      "type": "Person",
+      "text": "Justice Scott",
+      "relevance": 0.24238,
+      "count": 6
+    },
+    {
+      "type": "Organization",
+      "text": "Court of Chancery.",
+      "relevance": 0.231318,
+      "count": 1
+    },
+    {
+      "type": "Organization",
+      "text": "United States Supreme Court",
+      "relevance": 0.227796,
+      "disambiguation": {
+        "subtype": [
+          "GovernmentalBody"
+        ],
+        "name": "Supreme Court of the United States",
+        "dbpedia_resource": "http://dbpedia.org/resource/Supreme_Court_of_the_United_States"
+      },
+      "count": 1
+    },
+    {
+      "type": "Company",
+      "text": "Vivienda Water Co.",
+      "relevance": 0.219502,
+      "count": 2
+    },
+    {
+      "type": "Organization",
+      "text": "California Constitution",
+      "relevance": 0.217797,
+      "count": 3
+    },
+    {
+      "type": "Location",
+      "text": "Illinois",
+      "relevance": 0.216371,
+      "count": 5
+    },
+    {
+      "type": "Person",
+      "text": "Crossman",
+      "relevance": 0.215153,
+      "count": 2
+    },
+    {
+      "type": "Location",
+      "text": "Ct",
+      "relevance": 0.210529,
+      "count": 1
+    },
+    {
+      "type": "Company",
+      "text": "Penasquitos, Inc.",
+      "relevance": 0.210014,
+      "count": 1
+    },
+    {
+      "type": "Organization",
+      "text": "Constitution Revision Commission",
+      "relevance": 0.20942,
+      "count": 4
+    },
+    {
+      "type": "Company",
+      "text": "unexhausted",
+      "relevance": 0.207543,
+      "count": 1
+    },
+    {
+      "type": "Company",
+      "text": "o corporation",
+      "relevance": 0.206387,
+      "count": 1
+    },
+    {
+      "type": "Organization",
+      "text": "Courts of Appeal",
+      "relevance": 0.203659,
+      "count": 1
+    },
+    {
+      "type": "Person",
+      "text": "WALTER GREB",
+      "relevance": 0.202782,
+      "count": 2
+    },
+    {
+      "type": "Person",
+      "text": "Fitzgerald",
+      "relevance": 0.201592,
+      "count": 1
+    },
+    {
+      "type": "Person",
+      "text": "Karen Greb",
+      "relevance": 0.19818,
+      "count": 1
+    },
+    {
+      "type": "Person",
+      "text": "Kearney",
+      "relevance": 0.195119,
+      "count": 4
+    },
+    {
+      "type": "Company",
+      "text": "DIAMOND INTERNATIONAL",
+      "relevance": 0.191272,
+      "count": 1
+    },
+    {
+      "type": "Person",
+      "text": "Eisenberg",
+      "relevance": 0.190941,
+      "count": 1
+    },
+    {
+      "type": "Location",
+      "text": "Texas",
+      "relevance": 0.190726,
+      "count": 9
+    },
+    {
+      "type": "Location",
+      "text": "San Francisco City",
+      "relevance": 0.190674,
+      "count": 1
+    },
+    {
+      "type": "Location",
+      "text": "U.S.",
+      "relevance": 0.188768,
+      "disambiguation": {
+        "subtype": [
+          "Region",
+          "AdministrativeDivision",
+          "GovernmentalJurisdiction",
+          "FilmEditor",
+          "Country"
+        ],
+        "name": "United States",
+        "dbpedia_resource": "http://dbpedia.org/resource/United_States"
+      },
+      "count": 1
+    },
+    {
+      "type": "Company",
+      "text": "Offshore Rental Co.",
+      "relevance": 0.188483,
+      "count": 1
+    },
+    {
+      "type": "Company",
+      "text": "Continental Oil Co.",
+      "relevance": 0.188432,
+      "count": 1
+    },
+    {
+      "type": "Company",
+      "text": "Salomon Smith Barney, Inc.",
+      "relevance": 0.187161,
+      "count": 1
+    },
+    {
+      "type": "Company",
+      "text": "RegO Co.",
+      "relevance": 0.186827,
+      "count": 1
+    },
+    {
+      "type": "Person",
+      "text": "fns.",
+      "relevance": 0.184613,
+      "count": 1
+    },
+    {
+      "type": "Company",
+      "text": "Louisiana-Pacific Resources, Inc.",
+      "relevance": 0.184375,
+      "count": 2
+    },
+    {
+      "type": "Person",
+      "text": "LeBaron",
+      "relevance": 0.182532,
+      "count": 1
+    },
+    {
+      "type": "Person",
+      "text": "Anderson",
+      "relevance": 0.181813,
+      "count": 1
+    },
+    {
+      "type": "Person",
+      "text": "Hasko",
+      "relevance": 0.17961,
+      "count": 1
+    }
+  ],
+  "concepts": [
+    {
+      "text": "Corporation",
+      "relevance": 0.960681,
+      "dbpedia_resource": "http://dbpedia.org/resource/Corporation"
+    },
+    {
+      "text": "Foreign corporation",
+      "relevance": 0.639625,
+      "dbpedia_resource": "http://dbpedia.org/resource/Foreign_corporation"
+    },
+    {
+      "text": "Corporate law",
+      "relevance": 0.561111,
+      "dbpedia_resource": "http://dbpedia.org/resource/Corporate_law"
+    },
+    {
+      "text": "Appellate court",
+      "relevance": 0.5536,
+      "dbpedia_resource": "http://dbpedia.org/resource/Appellate_court"
+    },
+    {
+      "text": "Common law",
+      "relevance": 0.535832,
+      "dbpedia_resource": "http://dbpedia.org/resource/Common_law"
+    },
+    {
+      "text": "Appeal",
+      "relevance": 0.471115,
+      "dbpedia_resource": "http://dbpedia.org/resource/Appeal"
+    },
+    {
+      "text": "Supreme Court of the United States",
+      "relevance": 0.427248,
+      "dbpedia_resource": "http://dbpedia.org/resource/Supreme_Court_of_the_United_States"
+    },
+    {
+      "text": "Delaware General Corporation Law",
+      "relevance": 0.418591,
+      "dbpedia_resource": "http://dbpedia.org/resource/Delaware_General_Corporation_Law"
+    }
+  ],
+  "warnings": [
+    "truncated-oversized-text-content"
+  ],
+  "language": "en"
+}
