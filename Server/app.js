@@ -66,9 +66,7 @@ if (app.get('env') === 'production') {
 app.use(session(sess));
 
 app.get('/', function( req, res ) {
-  var ReactApp = React.createFactory(require('../Client/Components/app'));
-  var reactHtml = ReactDOMServer.renderToString(ReactApp({}));
-  res.render('signIn', {html: reactHtml});
+  res.render('home');
 });
 
 // Inserts a new State object in DB
