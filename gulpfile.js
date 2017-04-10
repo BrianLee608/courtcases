@@ -3,7 +3,6 @@ var gulp = require('gulp');
 var nodemon = require('gulp-nodemon');
 var jsFiles = ['*.js', 'Server/src/**/*.js'];
 var cssFile = ['*.css'];
-
 var uiFiles = jsFiles.concat(cssFile);
 var serve = function(){
   var options = {
@@ -18,5 +17,4 @@ var serve = function(){
       console.log('Restarting...');
   });
 };
-
 gulp.task('default', serve);
